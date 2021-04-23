@@ -8,7 +8,6 @@ export default function Navbar(props) {
         let userid = localStorage.getItem('kkss');
         makeCall('get', `http://localhost:5000/profile/${userid}`)
             .then(res => {
-                debugger;
                 setProfile(res.data.avatar)
             }).catch(err => {
                 console.log(err)

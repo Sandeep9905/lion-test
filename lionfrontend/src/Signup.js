@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { makeCall } from './apiservice/apiCall';
+import { apiCall } from './apiservice/apiCall';
 const init = {
     email: '',
     pwd: '',
@@ -11,8 +11,7 @@ export default function Signup(props) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(data)
-        makeCall('post', 'http://localhost:5000/signup', data)
+        apiCall('post', 'http://localhost:5000/signup', data)
             .then(res => {
                 setData(init)
             })
