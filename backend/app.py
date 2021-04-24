@@ -18,9 +18,6 @@ cors = CORS(app,resources={
 })
 
 app.config['SECRET_KEY'] = 'mysecretkey'
-#app.config['MONGO_URI'] = 'mongodb://localhost:27017/Lion'
-#this will connect the databse to pymongo library
-#mongo = PyMongo(app)
 myclient = pymongo.MongoClient("mongodb+srv://lion:lion@cluster0.njdcp.mongodb.net/liondatabase?retryWrites=true&w=majority")
 mydb = myclient["liondatabase"]
 myuser = mydb["customers"]
@@ -83,7 +80,7 @@ def create_user():
         'address': [],
         'mob':''
     }
-    myuser.insert(mydict)
+    myuser.insert_one(mydict)
     
     return jsonify({'message':'New User Created'})
 
