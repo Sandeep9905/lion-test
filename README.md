@@ -15,6 +15,7 @@ To run this Project you must have installed Python and React locally in your com
 For frontend part 
 1.cd to lionfrontend .
 2.then run npm install .
-3.npm start .
-4.it will the frontend part in your browser ...
+3.It will download all the node modules file that we need to run the app .
+4.npm start .
+5.it will the frontend part in your browser ...
 
